@@ -1,0 +1,15 @@
+#@title Download Assist { vertical-output: true }
+import os
+from IPython.display import clear_output
+#mount Personal Drive to Local Storge
+from google.colab import drive
+drive.mount('/content/drive')
+
+Dl_Link = '' #@param {type:"string"}
+
+#downloadingAction
+!wget "$Dl_Link" --directory-prefix="Put Your Path Here"
+
+clear_output()
+print("DOWNLOAD SUCCEDDD")
+print("File Saveing in /content/drive/Team Drives/EURO/Wget Downloaded")
